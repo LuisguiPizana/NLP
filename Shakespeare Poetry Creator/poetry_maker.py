@@ -77,7 +77,7 @@ def create_model(total_words, max_sequence_len):
     return model
 
 
-'''
+
 
 #%%
 
@@ -165,7 +165,8 @@ plt.show()
 
 #%%
 
-#seed_text = "Thus my heart burned with a vivid love"
+seed_text = "Thus my heart burned with a vivid love"
+
 next_words = 100
   
 for _ in range(next_words):
@@ -184,20 +185,19 @@ for _ in range(next_words):
 
 print(seed_text)
 
-'''
 
 
+
 '''
+Output 0
+
 Thus my heart burned with a vivid love
 refusest fulfil this you live
 me more, more forth lose rhyme dear
  weep change still is see thee mind days live
  mind eye brow rhyme dun room guard care brain
-'''
 
-
-
-'''
+#Output 1
 
 Thus my heart burned with a vivid love
  poverty use young prove sorrow lie enclose,
@@ -214,18 +214,6 @@ Thus my heart burned with a vivid love
  stay rehearse dead hate boast new hate so so life ' ' ' 
  alone alone more more lie strong mend set excellence day filed appear
  
- 
-    model = Sequential()
-    model.add(Embedding(total_words, 64))
-    model.add(Conv1D(filters = 64, strides = 1, kernel_size = 5,activation = 'relu', input_shape = [max_sequence_len -1,1]))
-    model.add(Bidirectional(LSTM(32, return_sequences = True)))
-    model.add(Bidirectional(LSTM(32)))
-    model.add(Dense(total_words, activation = 'softmax'))
-    
-    model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
-
-    
-    history = model.fit(xs, ys, validation_split = .3 ,epochs = 40, verbose = 1, batch_size = 5)
 
 
 '''

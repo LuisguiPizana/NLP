@@ -106,29 +106,6 @@ def objective(trial):
     
     
     
-    '''
-    FrozenTrial(number=8, values=[0.01697530783712864], datetime_start=datetime.datetime(2022, 9, 4, 15, 41, 48, 836534), datetime_complete=datetime.datetime(2022, 9, 4, 15, 44, 1, 879282),
-                params={'epochs': 40,
-                        'embedding_dims': 120,
-                        'n_filters': 80,
-                        'kernel_size': 6,
-                        'n_units_lstm1': 126,
-                        'n_units_lstm2': 16,
-                        'batch_size': 25},
-                distributions={'epochs': IntUniformDistribution(high=150, low=20, step=10),
-                               'embedding_dims': IntUniformDistribution(high=150, low=20, step=10),
-                               'n_filters': IntUniformDistribution(high=80, low=20, step=10),
-                               'kernel_size': IntUniformDistribution(high=8, low=2, step=2),
-                               'n_units_lstm1': IntUniformDistribution(high=126, low=16, step=10),
-                               'n_units_lstm2': IntUniformDistribution(high=126, low=16, step=10),
-                               'batch_size': IntUniformDistribution(high=25, low=3, step=2)},
-                user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=8, state=TrialState.COMPLETE, value=None)
-    {'epochs': 40, 'embedding_dims': 120, 'n_filters': 80, 'kernel_size': 6, 'n_units_lstm1': 126, 'n_units_lstm2': 16, 'batch_size': 25}
-    
-    '''
-    
-    
-    
     
     return val_acc
 
@@ -146,6 +123,33 @@ print(study.best_trial)
 
 
 print(study.best_params)
+
+
+
+
+'''
+FrozenTrial(number=8, values=[0.01697530783712864], datetime_start=datetime.datetime(2022, 9, 4, 15, 41, 48, 836534), datetime_complete=datetime.datetime(2022, 9, 4, 15, 44, 1, 879282),
+            params={'epochs': 40,
+                    'embedding_dims': 120,
+                    'n_filters': 80,
+                    'kernel_size': 6,
+                    'n_units_lstm1': 126,
+                    'n_units_lstm2': 16,
+                    'batch_size': 25},
+            distributions={'epochs': IntUniformDistribution(high=150, low=20, step=10),
+                            'embedding_dims': IntUniformDistribution(high=150, low=20, step=10),
+                            'n_filters': IntUniformDistribution(high=80, low=20, step=10),
+                            'kernel_size': IntUniformDistribution(high=8, low=2, step=2),
+                            'n_units_lstm1': IntUniformDistribution(high=126, low=16, step=10),
+                            'n_units_lstm2': IntUniformDistribution(high=126, low=16, step=10),
+                            'batch_size': IntUniformDistribution(high=25, low=3, step=2)},
+            user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=8, state=TrialState.COMPLETE, value=None)
+{'epochs': 40, 'embedding_dims': 120, 'n_filters': 80, 'kernel_size': 6, 'n_units_lstm1': 126, 'n_units_lstm2': 16, 'batch_size': 25}
+
+'''
+    
+#%%
+
 
 
 
