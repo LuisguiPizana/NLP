@@ -1,7 +1,7 @@
 
 # NLP
 
-This repository contains projects using NLP techniques. 
+This repository contains projects using NLP techniques. Work in progress. 
 
 ## Table of Contents
 1. ### English Spanish NMT
